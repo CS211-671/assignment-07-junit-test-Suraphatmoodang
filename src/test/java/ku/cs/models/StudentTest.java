@@ -52,11 +52,20 @@ class StudentTest {
 
     @Test
     @DisplayName("Testing Constructor")
-    void Student() {
+    void testStudentConstructor() {
         Student newS = new Student("60000000", "Michael");
         assertEquals("Michael", newS.getName());
         assertEquals("60000000", newS.getId());
         assertEquals(0, newS.getScore());
+    }
+
+    @Test
+    @DisplayName("Testing Constructor 2")
+    void testStudentConstructor2() {
+        Student newS = new Student("60000000", "Michael",   50.0);
+        assertEquals("Michael", newS.getName());
+        assertEquals("60000000", newS.getId());
+        assertEquals(50.0, newS.getScore());
     }
 
 
